@@ -77,9 +77,9 @@ if __name__ == "__main__":
 
     ray.init()
 
-    ts = np.random.rand(50).tolist()
-    # log(ts)
-    # ts = np.random.randint(37, size=(150,)).tolist()
+    # ts = np.random.rand(50).tolist()
+    ts = np.random.randint(37, size=(150,)).tolist()
+    log(ts)
 
     async_funcs = [
         # linear_apply,
@@ -89,8 +89,8 @@ if __name__ == "__main__":
     ]
 
     # waster_funcs = [waste_t, fib]
-    waster_funcs = [waste_t]
-    # waster_funcs = [fib]
+    # waster_funcs = [waste_t]
+    waster_funcs = [fib]
 
     experiments = product(async_funcs, waster_funcs)
 
